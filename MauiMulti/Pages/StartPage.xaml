@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:MauiMulti.ViewModels"
+             x:DataType="vm:StartViewModel"
+             x:Class="MauiMulti.Pages.StartPage"
+             Title="StartPage">
+    <ContentPage.MenuBarItems>
+        <MenuBarItem Text="File">
+            <MenuFlyoutItem Text="Exit" Command="{Binding ExitCommand}" />
+        </MenuBarItem>
+        <MenuBarItem Text="Pages">
+            <MenuFlyoutItem Text="Start" Command="{Binding GoToStartCommand}"/>
+            <MenuFlyoutItem Text="Detail" Command="{Binding GoToDetailCommand}" />
+        </MenuBarItem>
+    </ContentPage.MenuBarItems>
+    <VerticalStackLayout Padding="0,40">
+        <Label 
+            Text="Welcome to Start Page"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+    </VerticalStackLayout>
+</ContentPage>
